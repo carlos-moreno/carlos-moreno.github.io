@@ -18,14 +18,14 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+# Social widget
+SOCIAL = (('LinkedIn', 'https://www.linkedin.com/in/carlosaugustomoreno/'),
+          ('GitHub', 'https://github.com/carlos-moreno'),)
+
 # Blogroll
 LINKS = (('Python.org', 'https://www.python.org/'),
          ('Pelican', 'https://getpelican.com/'),
          ('Jinja2', 'https://palletsprojects.com/p/jinja/'),)
-
-# Social widget
-SOCIAL = (('LinkedIn', 'https://www.linkedin.com/in/carlosaugustomoreno/'),
-          ('GitHub', 'https://github.com/carlos-moreno'),)
 
 DEFAULT_PAGINATION = 10
 
