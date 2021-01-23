@@ -1,15 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
+from __future__ import unicode_literals
 
-AUTHOR = 'Carlos Augusto Moreno'
-SITENAME = 'Carlos Moreno'
+AUTHOR = u'Carlos Augusto Moreno'
+SITENAME = u'Carlos Moreno'
 SITEURL = ''
 
 PATH = 'content'
 
 TIMEZONE = 'America/Sao_Paulo'
 
-DEFAULT_LANG = 'pt'
+DEFAULT_LANG = u'pt'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
