@@ -1,5 +1,5 @@
 Title: Calculando datas no Bash
-Date: 2021-01-23 13:35
+Date: 2021-01-23 16:30
 Category: Bash
 Tags: bash, data
 Slug: calculando-datas-no-bash
