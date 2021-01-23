@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculando datas no Bash</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Carlos Augusto Moreno">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css" />
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+      .tag-1 {
+        font-size: 13pt;
+      }
+      .tag-2 {
+        font-size: 10pt;
+      }
+      .tag-2 {
+        font-size: 8pt;
+      }
+      .tag-4 {
+        font-size: 6pt;
+     }
+    </style>
+    <link href="/theme/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/theme/css/font-awesome.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/theme/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png">
+
+    <link href="/" type="application/atom+xml" rel="alternate" title="Carlos Moreno ATOM Feed" />
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/index.html">Carlos Moreno </a>
+          <div class="nav-collapse">
+            <ul class="nav">
+                          <li class="divider-vertical"></li>
+                  <li class="active">
+                    <a href="/category/bash.html">
+						<i class="icon-folder-open icon-large"></i>Bash
+					</a>
+                  </li>
+
+                          <ul class="nav pull-right">
+                                <li><a href="/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+                          </ul>
+
+            </ul>
+            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="span9" id="content">
+<section id="content">
+        <article>
+                <header>
+                        <h1>
+                                <a href=""
+                                        rel="bookmark"
+                                        title="Permalink to Calculando datas no Bash">
+                                        Calculando datas no Bash
+                                </a>
+                        </h1>
+                </header>
+                <div class="entry-content">
+                <div class="well">
+<footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2021-01-23T13:35:00-03:00">
+        <i class="icon-calendar"></i>Sat 23 January 2021
+</abbr>
+<span class="label">By</span>
+<a href="/author/carlos-augusto-moreno.html"><i class="icon-user"></i>Carlos Augusto Moreno</a>
+<span class="label">Category</span>
+<a href="/category/bash.html"><i class="icon-folder-open"></i>Bash</a>.
+
+
+<span class="label">Tags</span>
+	<a href="/tag/bash.html"><i class="icon-tag"></i>bash</a>
+	<a href="/tag/data.html"><i class="icon-tag"></i>data</a>
+</footer><!-- /.post-info -->                </div>
+                <h3>Introdução</h3>
+<p>Algumas vezes precisamos fazer alguns cálculos sobre datas para realizar alguma tarefa, quando isso é necessário e temos acesso a um shell bash as coisas ficam bem faceis, abaixo procuro mostrar de maneira rápida e clara como podemos fazer isso.</p>
+<h3>Realizando cálculo sobre datas</h3>
+<p>Para realizarmos cálculos sobre datas no bash, irei utilizar o comando date<sup>1</sup>, a seguir mostro alguns exemplos que considero ajudar aqueles que precisam realizar alguma tarefa envolvendo datas no bash.
+* Saber a data atual</p>
+<div class="highlight"><pre><span></span><code>$ date
+Sat <span class="m">23</span> Jan <span class="m">2021</span> <span class="m">03</span>:30:16 PM -03
+</code></pre></div>
+
+<p>Para sabermos qual a data daqui a <strong>x</strong> dias, temos que usar o parametro <em>-d</em> do comando date e em seguida passar a frase "now <em>+y/-y</em> day" (onde +/- informa se queremos saber uma data futura ou passada e y representa a quantidade de dias), por exemplo:
+* Saber a data daqui a 7 dias</p>
+<div class="highlight"><pre><span></span><code>$ date -d <span class="s2">&quot;now +7 day&quot;</span>
+Sat <span class="m">30</span> Jan <span class="m">2021</span> <span class="m">03</span>:31:57 PM -03
+</code></pre></div>
+
+<ul>
+<li>Saber a data daqui a 30 dias</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ date -d <span class="s2">&quot;now +30 day&quot;</span> 
+Mon <span class="m">22</span> Feb <span class="m">2021</span> <span class="m">03</span>:32:56 PM -03
+</code></pre></div>
+
+<ul>
+<li>Saber a data de 30 dias atrás</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ date -d <span class="s2">&quot;now -30 day&quot;</span> 
+Thu <span class="m">24</span> Dec <span class="m">2020</span> <span class="m">03</span>:38:26 PM -03
+</code></pre></div>
+
+<p>Acima utilizamos <em>days</em> para fazer o cálculo, mas podemos utilizar outros parâmetros se desejarmos, sendo eles:
+* second
+* minute
+* hour
+* day (utilizado nos comandos acima)
+* week
+* month
+* year</p>
+<p>Abaixo segue mais exemplos utilizando os outros parâmetros mencionados acima.
+* Saber a data daqui a 3 meses</p>
+<div class="highlight"><pre><span></span><code>$ date -d <span class="s2">&quot;now +3 month&quot;</span>
+Fri <span class="m">23</span> Apr <span class="m">2021</span> <span class="m">03</span>:47:49 PM -03
+</code></pre></div>
+
+<ul>
+<li>Saber a data de 2 meses atrás</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ date -d <span class="s2">&quot;now -2 month&quot;</span>
+Mon <span class="m">23</span> Nov <span class="m">2020</span> <span class="m">03</span>:48:37 PM -03
+</code></pre></div>
+
+<ul>
+<li>Saber a data daqui a 5 semanas</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ date -d <span class="s2">&quot;now +5 week&quot;</span>
+Sat <span class="m">27</span> Feb <span class="m">2021</span> <span class="m">03</span>:49:44 PM -03
+</code></pre></div>
+
+<ul>
+<li>Saber a data de 1 semana atrás</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ date -d <span class="s2">&quot;now -1 week&quot;</span>
+Sat <span class="m">16</span> Jan <span class="m">2021</span> <span class="m">03</span>:50:59 PM -03
+</code></pre></div>
+
+<ul>
+<li>Saber a data daqui a 7 anos</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ date -d <span class="s2">&quot;now +7 year&quot;</span>
+Sun <span class="m">23</span> Jan <span class="m">2028</span> <span class="m">03</span>:51:53 PM -03
+</code></pre></div>
+
+<ul>
+<li>Saber a data de 10 anos atrás</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ date -d <span class="s2">&quot;now -10 year&quot;</span>
+Sun <span class="m">23</span> Jan <span class="m">2011</span> <span class="m">04</span>:52:42 PM -02
+</code></pre></div>
+
+<p>Conforme os exemplos acima, pode ser visto como é fácil saber as datas futuras e passadas utilizando o bash, basicamente é conversar com ele em apenas uma linha e o resultado vem.</p>
+<h3>Formatando a saída</h3>
+<p>Como deve ter sido notado acima, as datas estão vindo no padrão LC_TIME para en_US.UTF-8, porém essa saída pode ser configurada conforme a sua necessidade, basta que você informe ao bash como deseja a formatação, algumas opções disponiveis serão descritas a seguir, a lista completa pode ser conferida em <a href="https://www.gnu.org/software/coreutils/manual/html_node/Date-conversion-specifiers.html#Date-conversion-specifiers">Date conversion specifiers</a>.
+* %a = o nome abreviado do dia da semana da localidade (por exemplo, 'Sáb')
+* %A = o nome completo do dia da semana da localidade (por exemplo, 'sábado')
+* %b = o nome abreviado do mês da (por exemplo, 'Jan')
+* %A = o nome completo do mês da localidade (por exemplo, 'janeiro')
+* %d = o dia do mês (por exemplo, '01')
+* %m = mês ('01'...'12')
+* %Y = ano (por exemplo, 2021)</p>
+<p>Alguns exemplos do que foi dito acima são:</p>
+<div class="highlight"><pre><span></span><code>$ date -d <span class="s2">&quot;now 2 month&quot;</span> +<span class="s2">&quot;%d/%m/%Y&quot;</span>
+<span class="m">23</span>/03/2021
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>$ date -d <span class="s2">&quot;now 10 week&quot;</span> +<span class="s2">&quot;%d/%m/%Y&quot;</span>
+<span class="m">03</span>/04/2021
+</code></pre></div>
+
+<p>Caso queira converter a hora, a lista completa pode ser conferida em <a href="https://www.gnu.org/software/coreutils/manual/html_node/Time-conversion-specifiers.html#Time-conversion-specifiers">Time conversion specifiers</a>, algumas opções são:
+* %H = hora ('00'...'23')
+* %M = minutos ('00'...'59')
+* %S = segundos ('00'...'60'). '60' se houver suporte para segundos bissextos.
+* %T = Hora, minuto e segundo. Igual a '%H:%M:%S' (Apresentação usando 24 horas).</p>
+<p>Alguns exemplos do que foi dito acima são:</p>
+<div class="highlight"><pre><span></span><code>$ date -d <span class="s2">&quot;now +35 days&quot;</span> +<span class="s2">&quot;%T&quot;</span>
+<span class="m">16</span>:21:48
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>$ date -d <span class="s2">&quot;now +35 days&quot;</span> +<span class="s2">&quot;%H/%M&quot;</span>
+<span class="m">16</span>/22
+</code></pre></div>
+
+<h3>Conclusão</h3>
+<p>Por hoje o que tenho para mostrar é isso, com um simples comando em bash podemos obter a data desejada usando poucos parâmetros.
+Não coloquei exemplos acima, mas os parâmetros para obter a data podem ser combinados, como por exemplo:</p>
+<div class="highlight"><pre><span></span><code>$ date -d <span class="s2">&quot;now +20 day +2 hour +5 month +3 year&quot;</span>
+Sat <span class="m">13</span> Jul <span class="m">2024</span> <span class="m">06</span>:27:39 PM -03
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>$ date -d <span class="s2">&quot;now -10 day +5 hour +5 month -2 year&quot;</span>
+Thu <span class="m">13</span> Jun <span class="m">2019</span> <span class="m">09</span>:28:27 PM -03
+</code></pre></div>
+                </div><!-- /.entry-content -->
+        </article>
+</section>
+        </div><!--/span-->
+
+                <div class="span3 well sidebar-nav" id="sidebar">
+<ul class="nav nav-list">
+<li class="nav-header"><h4><i class="icon-external-link"></i>blogroll</h4></li>
+    <li><a href="https://www.python.org/"><i class="icon-external-link"></i>Python.org</a></li>
+    <li><a href="https://getpelican.com/"><i class="icon-external-link"></i>Pelican</a></li>
+    <li><a href="https://palletsprojects.com/p/jinja/"><i class="icon-external-link"></i>Jinja2</a></li>
+<li class="nav-header"><h4><i class="icon-home icon-large"></i> social</h4></li>
+    <li><a href="https://www.linkedin.com/in/carlosaugustomoreno/"><i class="icon-LinkedIn-sign icon-large"></i>LinkedIn</a></li>
+    <li><a href="https://github.com/carlos-moreno"><i class="icon-GitHub-sign icon-large"></i>GitHub</a></li>
+
+<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
+<li>
+<a href="/category/bash.html">
+    <i class="icon-folder-open icon-large"></i>Bash
+</a>
+</li>
+
+<li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
+
+
+</ul>        </div><!--/.well -->
+
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <address id="about">
+                Proudly powered by <a href="http://pelican.notmyidea.org/">Pelican <i class="icon-external-link"></i></a>,
+                                which takes great advantage of <a href="http://python.org">Python <i class="icon-external-link"></i></a>.
+        </address><!-- /#about -->
+
+        <p>The theme is from <a href="http://twitter.github.com/bootstrap/">Bootstrap from Twitter <i class="icon-external-link"></i></a>,
+                   and <a href="http://fortawesome.github.com/Font-Awesome/">Font-Awesome <i class="icon-external-link"></i></a>, thanks!</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+
+
+    <!-- Le javascript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/theme/js/jquery-1.7.2.min.js"></script>
+    <script src="/theme/js/bootstrap.min.js"></script>
+  </body>
+</html>
