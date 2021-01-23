@@ -18,6 +18,8 @@ $ date
 Sat 23 Jan 2021 03:30:16 PM -03
 ```
 Para sabermos qual a data daqui a **x** dias, temos que usar o parametro *-d* do comando date e em seguida passar a frase "now *+y/-y* day" (onde +/- informa se queremos saber uma data futura ou passada e y representa a quantidade de dias), por exemplo:
+
+
 * Saber a data daqui a 7 dias
 ```
 $ date -d "now +7 day"
