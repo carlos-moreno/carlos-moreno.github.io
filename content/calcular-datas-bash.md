@@ -9,7 +9,8 @@ Summary: Uma apresentação rápida e clara sobre o cálculo de datas usando o b
 Algumas vezes precisamos fazer alguns cálculos sobre datas para realizar alguma tarefa, quando isso é necessário e temos acesso a um shell bash as coisas ficam bem faceis, abaixo procuro mostrar de maneira rápida e clara como podemos fazer isso.
 
 ### Realizando cálculo sobre datas
-Para realizarmos cálculos sobre datas no bash, irei utilizar o comando date<sup>1</sup>, a seguir mostro alguns exemplos que considero ajudar aqueles que precisam realizar alguma tarefa envolvendo datas no bash.
+Para realizarmos cálculos sobre datas no bash, irei utilizar o comando date, a seguir mostro alguns exemplos que considero ajudar aqueles que precisam realizar alguma tarefa envolvendo datas no bash.
+
 
 * Saber a data atual
 ```
@@ -34,6 +35,7 @@ Thu 24 Dec 2020 03:38:26 PM -03
 ```
 Acima utilizamos *days* para fazer o cálculo, mas podemos utilizar outros parâmetros se desejarmos, sendo eles:
 
+
 * second
 * minute
 * hour
@@ -43,6 +45,7 @@ Acima utilizamos *days* para fazer o cálculo, mas podemos utilizar outros parâ
 * year
 
 Abaixo segue mais exemplos utilizando os outros parâmetros mencionados acima.
+
 
 * Saber a data daqui a 3 meses
 ```
@@ -78,6 +81,7 @@ Conforme os exemplos acima, pode ser visto como é fácil saber as datas futuras
 
 ### Formatando a saída
 Como deve ter sido notado acima, as datas estão vindo no padrão LC_TIME para en_US.UTF-8, porém essa saída pode ser configurada conforme a sua necessidade, basta que você informe ao bash como deseja a formatação, algumas opções disponiveis serão descritas a seguir, a lista completa pode ser conferida em [Date conversion specifiers](https://www.gnu.org/software/coreutils/manual/html_node/Date-conversion-specifiers.html#Date-conversion-specifiers).
+
 
 * %a = o nome abreviado do dia da semana da localidade (por exemplo, 'Sáb')
 * %A = o nome completo do dia da semana da localidade (por exemplo, 'sábado')

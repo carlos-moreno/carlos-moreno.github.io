@@ -115,8 +115,10 @@
                 <h3>Introdução</h3>
 <p>Algumas vezes precisamos fazer alguns cálculos sobre datas para realizar alguma tarefa, quando isso é necessário e temos acesso a um shell bash as coisas ficam bem faceis, abaixo procuro mostrar de maneira rápida e clara como podemos fazer isso.</p>
 <h3>Realizando cálculo sobre datas</h3>
-<p>Para realizarmos cálculos sobre datas no bash, irei utilizar o comando date<sup>1</sup>, a seguir mostro alguns exemplos que considero ajudar aqueles que precisam realizar alguma tarefa envolvendo datas no bash.
-* Saber a data atual</p>
+<p>Para realizarmos cálculos sobre datas no bash, irei utilizar o comando date<sup>1</sup>, a seguir mostro alguns exemplos que considero ajudar aqueles que precisam realizar alguma tarefa envolvendo datas no bash.</p>
+<ul>
+<li>Saber a data atual</li>
+</ul>
 <div class="highlight"><pre><span></span><code>$ date
 Sat <span class="m">23</span> Jan <span class="m">2021</span> <span class="m">03</span>:30:16 PM -03
 </code></pre></div>
@@ -141,16 +143,20 @@ Mon <span class="m">22</span> Feb <span class="m">2021</span> <span class="m">03
 Thu <span class="m">24</span> Dec <span class="m">2020</span> <span class="m">03</span>:38:26 PM -03
 </code></pre></div>
 
-<p>Acima utilizamos <em>days</em> para fazer o cálculo, mas podemos utilizar outros parâmetros se desejarmos, sendo eles:
-* second
-* minute
-* hour
-* day (utilizado nos comandos acima)
-* week
-* month
-* year</p>
-<p>Abaixo segue mais exemplos utilizando os outros parâmetros mencionados acima.
-* Saber a data daqui a 3 meses</p>
+<p>Acima utilizamos <em>days</em> para fazer o cálculo, mas podemos utilizar outros parâmetros se desejarmos, sendo eles:</p>
+<ul>
+<li>second</li>
+<li>minute</li>
+<li>hour</li>
+<li>day (utilizado nos comandos acima)</li>
+<li>week</li>
+<li>month</li>
+<li>year</li>
+</ul>
+<p>Abaixo segue mais exemplos utilizando os outros parâmetros mencionados acima.</p>
+<ul>
+<li>Saber a data daqui a 3 meses</li>
+</ul>
 <div class="highlight"><pre><span></span><code>$ date -d <span class="s2">&quot;now +3 month&quot;</span>
 Fri <span class="m">23</span> Apr <span class="m">2021</span> <span class="m">03</span>:47:49 PM -03
 </code></pre></div>
@@ -192,14 +198,16 @@ Sun <span class="m">23</span> Jan <span class="m">2011</span> <span class="m">04
 
 <p>Conforme os exemplos acima, pode ser visto como é fácil saber as datas futuras e passadas utilizando o bash, basicamente é conversar com ele em apenas uma linha e o resultado vem.</p>
 <h3>Formatando a saída</h3>
-<p>Como deve ter sido notado acima, as datas estão vindo no padrão LC_TIME para en_US.UTF-8, porém essa saída pode ser configurada conforme a sua necessidade, basta que você informe ao bash como deseja a formatação, algumas opções disponiveis serão descritas a seguir, a lista completa pode ser conferida em <a href="https://www.gnu.org/software/coreutils/manual/html_node/Date-conversion-specifiers.html#Date-conversion-specifiers">Date conversion specifiers</a>.
-* %a = o nome abreviado do dia da semana da localidade (por exemplo, 'Sáb')
-* %A = o nome completo do dia da semana da localidade (por exemplo, 'sábado')
-* %b = o nome abreviado do mês da (por exemplo, 'Jan')
-* %A = o nome completo do mês da localidade (por exemplo, 'janeiro')
-* %d = o dia do mês (por exemplo, '01')
-* %m = mês ('01'...'12')
-* %Y = ano (por exemplo, 2021)</p>
+<p>Como deve ter sido notado acima, as datas estão vindo no padrão LC_TIME para en_US.UTF-8, porém essa saída pode ser configurada conforme a sua necessidade, basta que você informe ao bash como deseja a formatação, algumas opções disponiveis serão descritas a seguir, a lista completa pode ser conferida em <a href="https://www.gnu.org/software/coreutils/manual/html_node/Date-conversion-specifiers.html#Date-conversion-specifiers">Date conversion specifiers</a>.</p>
+<ul>
+<li>%a = o nome abreviado do dia da semana da localidade (por exemplo, 'Sáb')</li>
+<li>%A = o nome completo do dia da semana da localidade (por exemplo, 'sábado')</li>
+<li>%b = o nome abreviado do mês da (por exemplo, 'Jan')</li>
+<li>%A = o nome completo do mês da localidade (por exemplo, 'janeiro')</li>
+<li>%d = o dia do mês (por exemplo, '01')</li>
+<li>%m = mês ('01'...'12')</li>
+<li>%Y = ano (por exemplo, 2021)</li>
+</ul>
 <p>Alguns exemplos do que foi dito acima são:</p>
 <div class="highlight"><pre><span></span><code>$ date -d <span class="s2">&quot;now 2 month&quot;</span> +<span class="s2">&quot;%d/%m/%Y&quot;</span>
 <span class="m">23</span>/03/2021
@@ -209,11 +217,13 @@ Sun <span class="m">23</span> Jan <span class="m">2011</span> <span class="m">04
 <span class="m">03</span>/04/2021
 </code></pre></div>
 
-<p>Caso queira converter a hora, a lista completa pode ser conferida em <a href="https://www.gnu.org/software/coreutils/manual/html_node/Time-conversion-specifiers.html#Time-conversion-specifiers">Time conversion specifiers</a>, algumas opções são:
-* %H = hora ('00'...'23')
-* %M = minutos ('00'...'59')
-* %S = segundos ('00'...'60'). '60' se houver suporte para segundos bissextos.
-* %T = Hora, minuto e segundo. Igual a '%H:%M:%S' (Apresentação usando 24 horas).</p>
+<p>Caso queira converter a hora, a lista completa pode ser conferida em <a href="https://www.gnu.org/software/coreutils/manual/html_node/Time-conversion-specifiers.html#Time-conversion-specifiers">Time conversion specifiers</a>, algumas opções são:</p>
+<ul>
+<li>%H = hora ('00'...'23')</li>
+<li>%M = minutos ('00'...'59')</li>
+<li>%S = segundos ('00'...'60'). '60' se houver suporte para segundos bissextos.</li>
+<li>%T = Hora, minuto e segundo. Igual a '%H:%M:%S' (Apresentação usando 24 horas).</li>
+</ul>
 <p>Alguns exemplos do que foi dito acima são:</p>
 <div class="highlight"><pre><span></span><code>$ date -d <span class="s2">&quot;now +35 days&quot;</span> +<span class="s2">&quot;%T&quot;</span>
 <span class="m">16</span>:21:48
