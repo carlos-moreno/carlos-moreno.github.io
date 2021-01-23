@@ -10,8 +10,10 @@
 Sat &lt;span class="m"&gt;23&lt;/span&gt; Jan &lt;span class="m"&gt;2021&lt;/span&gt; &lt;span class="m"&gt;03&lt;/span&gt;:30:16 PM -03
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Para sabermos qual a data daqui a &lt;strong&gt;x&lt;/strong&gt; dias, temos que usar o parametro &lt;em&gt;-d&lt;/em&gt; do comando date e em seguida passar a frase "now &lt;em&gt;+y/-y&lt;/em&gt; day" (onde +/- informa se queremos saber uma data futura ou passada e y representa a quantidade de dias), por exemplo:
-* Saber a data daqui a 7 dias&lt;/p&gt;
+&lt;p&gt;Para sabermos qual a data daqui a &lt;strong&gt;x&lt;/strong&gt; dias, temos que usar o parametro &lt;em&gt;-d&lt;/em&gt; do comando date e em seguida passar a frase "now &lt;em&gt;+y/-y&lt;/em&gt; day" (onde +/- informa se queremos saber uma data futura ou passada e y representa a quantidade de dias), por exemplo:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Saber a data daqui a 7 dias&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ date -d &lt;span class="s2"&gt;&amp;quot;now +7 day&amp;quot;&lt;/span&gt;
 Sat &lt;span class="m"&gt;30&lt;/span&gt; Jan &lt;span class="m"&gt;2021&lt;/span&gt; &lt;span class="m"&gt;03&lt;/span&gt;:31:57 PM -03
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
